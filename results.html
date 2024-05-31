@@ -1,0 +1,141 @@
+<!-- html page for the results web page -->
+<html>
+
+<head>
+    <title>SMART AGRICULTURAL DECISION MAKER</title>
+    <!-- Linking the style sheet where the designs are done -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="heading">
+            <h1>SMART AGRICULTURAL DECISION MAKER</h1>
+        </div>
+        <div class="inputs">
+            <p>Predicted Crop : </p>
+            <!-- Predicted crop name is displayed here -->
+            <h4 class="result" id="cropName">Loading...</h4>
+            <!-- crop image is displayed here -->
+            <img class="cropimage" id="cropImage">
+        </div>
+        <div>
+            <!-- This displays the table containing accuracy, precision, support, f1 -->
+            <div class="metrics-table" style="display: none;">
+                <table border="1">
+                    <caption>Evaluation Metrics : </caption>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>Accuracy</td>
+                        <td id="acc1">Loading...</td>
+                    </tr>
+                    <tr>
+                        <td>Precision</td>
+                        <td id="prec1">Loading...</td>
+                    </tr>
+                    <tr>
+                        <td>Recall</td>
+                        <td id="rec1">Loading...</td>
+                    </tr>
+                    <tr>
+                        <td>F1 Score</td>
+                        <td id="f11">Loading...</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- button which pops up the metric table -->
+            <button type="button" id="showMetricsTableBtn" class="metrics">Show Metrics</button>
+        </div>
+
+        <!-- javascript for user interaction -->
+        <script>
+            // Extract the query parameters from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const crop = urlParams.get('crop');
+            const acc = urlParams.get('accuracy');
+            const prec = urlParams.get('precision');
+            const rec = urlParams.get('recall');
+            const f = urlParams.get('f1');
+
+            const cropNameElement = document.getElementById('cropName');
+            const accuracyElement = document.getElementById('acc1');
+            const precisionElement = document.getElementById('prec1');
+            const recallElement = document.getElementById('rec1');
+            const f1Element = document.getElementById('f11');
+            const showMetricsTableBtn = document.getElementById('showMetricsTableBtn');
+
+            // Updating the results in the HTML
+            if (crop) {
+                cropNameElement.textContent = crop;
+                // Updating the image source based on the crop
+                const cropImageElement = document.getElementById('cropImage');
+                const imagePath = `Images\\${crop.toLowerCase()}.jpg`;
+                cropImageElement.src = imagePath; // Setting the image source based on the crop name
+            } else {
+                cropNameElement.textContent = 'Unknown';
+            }
+
+            // action to be done when Show Metrics is clicked
+            showMetricsTableBtn.addEventListener('click', () => {
+                // Format for table
+                const metricsTableContent = `
+            <html>
+            <head>
+                <title>Evaluation Metrics</title>
+                <style>
+                    table {
+                        border-collapse: collapse;
+                        width: 100%;
+                    }
+                    th, td {
+                        border: 1px solid #dddddd;
+                        text-align: left;
+                        padding: 8px;
+                    }
+                    th {
+                        background-color: #f2f2f2;
+                    }
+                </style>
+            </head>
+            <body>
+                <h1>Evaluation Metrics for ${crop} :</h1>
+                <table>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                    </tr>
+                    <!---getting the results--->
+                    <tr>
+                        <td>Accuracy</td>
+                        <td>${acc ? (acc * 100).toFixed(2) + '%' : 'N/A'}</td>
+                    </tr>
+                    <tr>
+                        <td>Precision</td>
+                        <td>${prec ? (prec * 100).toFixed(2) + '%' : 'N/A'}</td>
+                    </tr>
+                    <tr>
+                        <td>Recall</td>
+                        <td>${rec ? (rec * 100).toFixed(2) + '%' : 'N/A'}</td>
+                    </tr>
+                    <tr>
+                        <td>F1 Score</td>
+                        <td>${f ? (f * 100).toFixed(2) + '%' : 'N/A'}</td>
+                    </tr>
+                </table>
+            </body>
+            </html>
+        `;
+                // Open a new window and write the content
+                const metricsTableWindow = window.open('', '_blank', 'width=600,height=400');
+                metricsTableWindow.document.write(metricsTableContent);
+            });
+
+        </script>
+    </div>
+</body>
+
+</html>

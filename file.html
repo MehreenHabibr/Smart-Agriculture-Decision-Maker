@@ -1,0 +1,282 @@
+<!-- html page for the main web page -->
+<html>
+
+<head>
+    <title>SMART AGRICULTURAL DECISION MAKER</title>
+    <!-- Linking the style sheet where the designs are done -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <img src="Images\Main_logo.png" class="logo">
+        <div class="heading">
+            <h1>SMART AGRICULTURAL DECISION MAKER</h1>
+        </div>
+        <div>
+            <!-- Buttons that show the models and data exploration -->
+            <button type="button" id="showPlotBtn" class="print">Crop Distribution</button>
+            <img id="plotImage" src="" alt="Plot" style="display: none;">
+            <button type="button" id="showFeaturesBtn" class="print">Feature Importance</button>
+            <img id="featureImage" src="" alt="Plot" style="display: none;">
+            <button type="button" id="modelComparisonsBtn" class="print">Model Comparisons</button>
+            <button type="button" id="showROCCurve" class="print">ROC Curve</button>
+            <img id="rocCurveImg" src="" alt="Plot" style="display: none;">
+        </div>
+        <div class="inputs">
+            <p>Enter the corresponding input values : </p>
+            <!-- form that takes the input from the user -->
+            <form class="form" id="myForm">
+                <!-- dropdown for district name -->
+                <label for="distname">District Name</label>
+                <select id="distname" name="distname" class="label1">
+                    <option value="" selected disabled hidden></option>
+                    <!-- Options will appear dynamically -->
+                </select><br><br>
+                <!-- dropdown for soil color -->
+                <label for="soilcolor">Soil Color </label>
+                <select id="soilcolor" name="soilcolor" class="label2">
+                    <option value="" selected disabled hidden></option>
+                    <!-- Options will appear dynamically -->
+                </select><br><br>
+                <!-- Taking the text input -->
+                <label for="nitrogen">Nitrogen </label>
+                <input type="text" id="nitrogen" name="nitrogen" class="label3"><br><br>
+                <label for="phosphorus">Phosphorus </label>
+                <input type="text" id="phosphorus" name="phosphorus" class="label4"><br><br>
+                <label for="potassium">Potassium </label>
+                <input type="text" id="potassium" name="potassium" class="label8"><br><br>
+                <label for="pH">pH </label>
+                <input type="text" id="pH" name="pH" class="label5"><br><br>
+                <label for="rainfall">Rainfall </label>
+                <input type="text" id="rainfall" name="rainfall" class="label6"><br><br>
+                <label for="temp">Temperature </label>
+                <input type="text" id="temp" name="temp" class="label7"><br><br>
+                <!-- dropdown for fertilizer -->
+                <label for="fertilizer">Fertilizer </label>
+                <select id="fertilizer" name="fertilizer" class="label3">
+                    <option value="" selected disabled hidden></option>
+                    <!-- Options will appear dynamically -->
+                </select><br><br><br>
+                <input type="submit" value="Submit" class="print" id="submitButton">
+            </form>
+            
+            <!-- javascript for user interaction -->
+            <script>
+
+                const myForm = document.querySelector('.form');
+                const districtDropdown = document.getElementById('distname');
+                const soilcolorDropdown = document.getElementById('soilcolor');
+                const fertilizerDropdown = document.getElementById('fertilizer');
+                const showROCCurveBtn = document.getElementById('showROCCurve');
+                const showPlotBtn = document.getElementById('showPlotBtn');
+                const showFeaturesBtn = document.getElementById('showFeaturesBtn');
+                const showModelComparisonsBtn = document.getElementById('modelComparisonsBtn');
+
+                // Fetch districts data from backend endpoint
+                fetch('http://127.0.0.1:5000/districts')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok.');
+                        }
+                        return response.json();
+                    })
+                    .then(districtsData => {
+                        // Populate the dropdown with district names received from the backend
+                        districtsData.forEach(district => {
+                            const option = document.createElement('option');
+                            option.value = district;
+                            option.textContent = district;
+                            districtDropdown.appendChild(option);
+                        });
+                    })
+                    // Handling errors from the request
+                    .catch(error => console.log(error));
+                // Fetch soil color data from backend endpoint
+                fetch('http://127.0.0.1:5000/soilcolor')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok.');
+                        }
+                        return response.json();
+                    })
+                    .then(soilData => {
+                        // Populate the dropdown with soil colors received from the backend
+                        soilData.forEach(color => {
+                            const option = document.createElement('option');
+                            option.value = color;
+                            option.textContent = color;
+                            soilcolorDropdown.appendChild(option);
+                        });
+                    })
+                    // Handling errors from the request
+                    .catch(error => console.log(error));
+                // Fetch fertilizers data from backend endpoint
+                fetch('http://127.0.0.1:5000/fertilizer')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok.');
+                        }
+                        return response.json();
+                    })
+                    .then(fertilizerData => {
+                        // Populate the dropdown with fertilizers received from the backend
+                        fertilizerData.forEach(fertilizer => {
+                            const option = document.createElement('option');
+                            option.value = fertilizer;
+                            option.textContent = fertilizer;
+                            fertilizerDropdown.appendChild(option);
+                        });
+                    })
+                    // Handling errors from the request
+                    .catch(error => console.log(error));
+
+                // action to be done when submit is clicked
+                myForm.addEventListener('submit', event => {
+                    event.preventDefault();
+                    //getting all the form data
+                    const formData = new FormData(myForm);
+                    //converting form data to javascript object
+                    const data = Object.fromEntries(formData);
+                    // making a request using fetch API
+                    fetch('http://127.0.0.1:5000', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    }).then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok.');
+                        }
+                        return response.json();
+                    })
+                        .then(data => {
+                            // Redirect to results.html and pass data as a query parameter
+                            window.location.href = `results.html?crop=${data.result}&accuracy=${data.accuracy}
+                                &precision=${data.precision}&recall=${data.recall}&f1=${data.f1}`;
+                        })
+                        // Handling errors from the request
+                        .catch(error => console.log(error));
+                });
+
+
+                // action to be done when ROC Curve is clicked    
+                showROCCurveBtn.addEventListener('click', () => {
+                    // Open a new window
+                    const plotWindow = window.open('', '_blank', 'width=650,height=500');
+                    // fetch ROC curve from backend endpoint
+                    fetch('http://127.0.0.1:5000/roc')
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok.');
+                            }
+                            return response.blob(); // Get the image blob
+                        })
+                        .then(blob => {
+                            // Convert the blob to a URL
+                            const imageURL = URL.createObjectURL(blob);
+                            // Set as the image source in the new window
+                            plotWindow.document.write(`<img src="${imageURL}" alt="ROC Curve">`);
+                        })
+                        // Handling errors from the request
+                        .catch(error => console.error('Error:', error));
+                });
+
+                // action to be done when Crop Distribution is clicked
+                showPlotBtn.addEventListener('click', () => {
+                    // Open a new window
+                    const plotWindow = window.open('', '_blank', 'width=650,height=800');
+                    // Fetch and display the plot image in the new window
+                    fetch('http://127.0.0.1:5000/targetplot')
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok.');
+                            }
+                            return response.blob(); // Get the image blob
+                        })
+                        .then(blob => {
+                            // Convert the blob to a URL
+                            const imageURL = URL.createObjectURL(blob);
+                            //  Set as the image source in the new window
+                            plotWindow.document.write(`<img src="${imageURL}" alt="Plot">`);
+                        })
+                        // Handling errors from the request
+                        .catch(error => console.error('Error:', error));
+                });
+
+                // action to be done when Feature Importance is clicked
+                showFeaturesBtn.addEventListener('click', () => {
+                    // Open a new window
+                    const plotWindow = window.open('', '_blank', 'width=650,height=800');
+                    // Fetch and display the plot image in the new window
+                    fetch('http://127.0.0.1:5000/features')
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok.');
+                            }
+                            return response.blob(); // Get the image blob
+                        })
+                        .then(blob => {
+                            // Convert the blob to a URL
+                            const imageURL = URL.createObjectURL(blob);
+                            // Set as the image source in the new window
+                            plotWindow.document.write(`<img src="${imageURL}" alt="Plot">`);
+                        })
+                        // Handling errors from the request
+                        .catch(error => console.error('Error:', error));
+                });
+
+                // action to be done when Model Comparisons is clicked
+                showModelComparisonsBtn.addEventListener('click', () => {
+                    // fetch models from backend endpoint
+                    fetch('http://127.0.0.1:5000/models', {
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        }
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            // Accessing model comparison data and open a new window to display it
+                            // Generating content for the new window
+                            const modelComparisonContent = `
+                <html>
+                <head>
+                    <title>Model Comparisons</title>
+                    <!-- Add any styles or meta tags if needed -->
+                </head>
+                <body>
+                    <h1>Model Comparisons : </h1><br>
+                    <h3>Results for SVM vs Random Forest : </h3>
+                    <p>Confidence Interval: (${data.svm_rf_ci})</p>
+                    <p>${data.svm_rf_result}</p>
+                    <p>Selected Model: ${data.svm_rf_model}</p><br>
+                    <h3>Results for SVM vs Decision Tree : </h3>
+                    <p>Confidence Interval: (${data.svm_dt_ci})</p>
+                    <p>${data.svm_dt_result}</p>
+                    <p>Selected Model: ${data.svm_dt_model}</p><br>
+                    <h3>Results for Random Forest vs Decision Tree : </h3>
+                    <p>Confidence Interval: (${data.rf_dt_ci})</p>
+                    <p>${data.rf_dt_result}</p>
+                    <p>Selected Model: ${data.rf_dt_model}</p><br>
+                    <h2>Overall Best Model : ${data.best_model}</h2>
+                </body>
+                </html>
+            `;
+                            // Open a new window and write the content
+                            const modelComparisonWindow = window.open('', '_blank', 'width=600,height=400');
+                            modelComparisonWindow.document.write(modelComparisonContent);
+                        })
+                        // Handling errors from the request
+                        .catch(error => {
+                            console.error('Error:', error);
+                        });
+                });
+
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

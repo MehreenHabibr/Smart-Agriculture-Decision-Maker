@@ -1,0 +1,491 @@
+[
+    {
+        "label": "io",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "io",
+        "description": "io",
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "BytesIO",
+        "importPath": "io",
+        "description": "io",
+        "isExtraImport": true,
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "BaseEstimator",
+        "importPath": "sklearn.base",
+        "description": "sklearn.base",
+        "isExtraImport": true,
+        "detail": "sklearn.base",
+        "documentation": {}
+    },
+    {
+        "label": "label_binarize",
+        "importPath": "sklearn.calibration",
+        "description": "sklearn.calibration",
+        "isExtraImport": true,
+        "detail": "sklearn.calibration",
+        "documentation": {}
+    },
+    {
+        "label": "LabelEncoder",
+        "importPath": "sklearn.preprocessing",
+        "description": "sklearn.preprocessing",
+        "isExtraImport": true,
+        "detail": "sklearn.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "StandardScaler",
+        "importPath": "sklearn.preprocessing",
+        "description": "sklearn.preprocessing",
+        "isExtraImport": true,
+        "detail": "sklearn.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "RandomForestClassifier",
+        "importPath": "sklearn.ensemble",
+        "description": "sklearn.ensemble",
+        "isExtraImport": true,
+        "detail": "sklearn.ensemble",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "cross_val_score",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "cross_val_predict",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "t",
+        "importPath": "scipy.stats",
+        "description": "scipy.stats",
+        "isExtraImport": true,
+        "detail": "scipy.stats",
+        "documentation": {}
+    },
+    {
+        "label": "ttest_ind",
+        "importPath": "scipy.stats",
+        "description": "scipy.stats",
+        "isExtraImport": true,
+        "detail": "scipy.stats",
+        "documentation": {}
+    },
+    {
+        "label": "auc",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "confusion_matrix",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "log_loss",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "roc_curve",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "warnings",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "warnings",
+        "description": "warnings",
+        "detail": "warnings",
+        "documentation": {}
+    },
+    {
+        "label": "SVC",
+        "importPath": "sklearn.svm",
+        "description": "sklearn.svm",
+        "isExtraImport": true,
+        "detail": "sklearn.svm",
+        "documentation": {}
+    },
+    {
+        "label": "DecisionTreeClassifier",
+        "importPath": "sklearn.tree",
+        "description": "sklearn.tree",
+        "isExtraImport": true,
+        "detail": "sklearn.tree",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "send_file",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib",
+        "description": "matplotlib",
+        "detail": "matplotlib",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "class_weight",
+        "importPath": "sklearn.utils",
+        "description": "sklearn.utils",
+        "isExtraImport": true,
+        "detail": "sklearn.utils",
+        "documentation": {}
+    },
+    {
+        "label": "RandomForest",
+        "kind": 6,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "class RandomForest(BaseEstimator):\n    def __init__(self, n_trees=7, max_depth=13, min_samples=2, min_samples_leaf=1, min_samples_split = 2, n_estimators =100, criterion =log_loss, bootstrap=True):\n        self.n_trees = n_trees\n        self.max_depth = max_depth\n        self.trees = []\n        self.min_samples = min_samples\n        self.min_samples_leaf = min_samples_leaf\n        self.min_samples_split = min_samples_split\n        self.n_estimators = n_estimators\n        self.criterion= criterion",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "return_districts",
+        "kind": 2,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "def return_districts():\n    districts = data_sample['District_Name'].tolist()  \n    unique_districts = list(set(districts))\n    return unique_districts\n# Function to send soil colors from dataset to appear in dropdown\n@backend.route('/soilcolor', methods=['POST','GET'])\ndef return_soilcolor():\n    soil_color = data_sample['Soil_color'].tolist()  \n    unique_soilcolor = list(set(soil_color))\n    return unique_soilcolor",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "return_soilcolor",
+        "kind": 2,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "def return_soilcolor():\n    soil_color = data_sample['Soil_color'].tolist()  \n    unique_soilcolor = list(set(soil_color))\n    return unique_soilcolor\n# Function to send fertilizers from dataset to appear in dropdown\n@backend.route('/fertilizer', methods=['POST','GET'])\ndef return_fertilizer():\n    fertilizer = data_sample['Fertilizer'].tolist()\n    unique_fertilizer = list(set(fertilizer))\n    return unique_fertilizer",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "return_fertilizer",
+        "kind": 2,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "def return_fertilizer():\n    fertilizer = data_sample['Fertilizer'].tolist()\n    unique_fertilizer = list(set(fertilizer))\n    return unique_fertilizer\n# Plotting graph for target variables\n@backend.route('/targetplot', methods=['POST','GET'])\ndef plot_targets():\n    label_name = data['Crop'].value_counts().index\n    val = data['Crop'].value_counts().values\n    plt.figure(figsize=(6,8))",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "plot_targets",
+        "kind": 2,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "def plot_targets():\n    label_name = data['Crop'].value_counts().index\n    val = data['Crop'].value_counts().values\n    plt.figure(figsize=(6,8))\n    plt.title('Distribution of Crops')\n    plt.pie(x=val, labels=label_name, shadow=True, autopct='%1.1f%%')\n    # Save the plot to a BytesIO object\n    buffer = BytesIO()\n    plt.savefig(buffer, format='png')\n    buffer.seek(0)",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_error_rate",
+        "kind": 2,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "def calculate_error_rate(predictions, true_labels):\n    return np.sum(predictions != true_labels) / len(true_labels)\n# Function to calculate the confidence interval\ndef calculate_confidence_interval(t_statistic, se_diff, df, confidence_level):\n    alpha = 1 - confidence_level\n    critical_value = t.ppf(1 - alpha / 2, df)\n    margin_of_error = critical_value * se_diff\n    lower_bound = t_statistic - margin_of_error\n    upper_bound = t_statistic + margin_of_error\n    return lower_bound, upper_bound",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_confidence_interval",
+        "kind": 2,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "def calculate_confidence_interval(t_statistic, se_diff, df, confidence_level):\n    alpha = 1 - confidence_level\n    critical_value = t.ppf(1 - alpha / 2, df)\n    margin_of_error = critical_value * se_diff\n    lower_bound = t_statistic - margin_of_error\n    upper_bound = t_statistic + margin_of_error\n    return lower_bound, upper_bound\n# Function to print the result for each pair of models\ndef print_result(t_statistic, p_value, model1, model2, error_diff, se_diff, df):\n    confidence_level = 0.95",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "print_result",
+        "kind": 2,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "def print_result(t_statistic, p_value, model1, model2, error_diff, se_diff, df):\n    confidence_level = 0.95\n    conf_interval = calculate_confidence_interval(t_statistic, se_diff, df, confidence_level)\n    if p_value < (1 - confidence_level) / 2:\n        result = f\"The error rate difference between {model1} and {model2} is statistically significant at {confidence_level * 100}% confidence level.\"\n        if error_diff > 0:\n            selected_model = model1\n        elif error_diff < 0:\n            selected_model = model2\n        else:",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "model_comparisons",
+        "kind": 2,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "def model_comparisons():\n    # Suppress specific warnings\n    warnings.filterwarnings(\"ignore\", category=RuntimeWarning, message=\"Precision loss occurred in moment calculation*\")\n    # Split the data into training and testing sets\n    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)\n    # Train models\n    random_forest = RandomForestClassifier(random_state=42)\n    svm = SVC(random_state=42)\n    decision_tree = DecisionTreeClassifier(random_state=42)\n    random_forest.fit(X_train, y_train)",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "roc_curves",
+        "kind": 2,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "def roc_curves():\n    # Split the data into training and testing sets\n    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)\n    # Initialize models after splitting the data\n    random_forest = RandomForestClassifier(random_state=42)\n    decision_tree = DecisionTreeClassifier(random_state=42)\n    svm = SVC(random_state=42, probability=True)  # Set probability to True for SVM \n    # Train models\n    random_forest.fit(X_train, y_train)\n    decision_tree.fit(X_train, y_train)",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "feature_importance",
+        "kind": 2,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "def feature_importance():\n    # Splitting the dataset and training the model\n    random_forest = RandomForestClassifier(random_state=42)\n    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)\n    random_forest.fit(X_train, y_train)\n    # Convert X_train to a DataFrame if it's not already\n    X_train_df = pd.DataFrame(X_train, columns=['District_Name', 'Soil_color', 'Nitrogen', 'Phosphorus', 'Potassium', 'pH', 'Rainfall', 'Temperature', 'Fertilizer'])\n    # Get feature importances\n    importances = random_forest.feature_importances_\n    features = X_train_df.columns",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "recommendation",
+        "kind": 2,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "def recommendation(District_Name, Soil_color, Nitrogen, Phosphorus, Potassium, pH, Rainfall, Temperature, Fertilizer, rmodel, sc, label_encoders):\n    # Encode the categorical features\n    District_Name_encoded = label_encoders['District_Name'].transform([District_Name])[0]\n    Soil_color_encoded = label_encoders['Soil_color'].transform([Soil_color])[0]\n    Fertilizer_encoded = label_encoders['Fertilizer'].transform([Fertilizer])[0]\n    # Arrange features into a numpy array\n    features = np.array([[District_Name_encoded, Soil_color_encoded, Nitrogen, Phosphorus, Potassium, pH, Rainfall, Temperature, Fertilizer_encoded]])\n    # X = sc.fit(features)\n    # Scale features using StandardScaler\n    X = sc.transform(features)",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "recommend",
+        "kind": 2,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "def recommend():\n    # Handling incoming HTTP requests\n    content_type = request.headers.get('Content-Type')\n    if content_type != 'application/json':\n        return \"Unsupported Media Type\", 415  # Unsupported Media Type status code\n    result = None\n    if request.method == 'POST':\n        # Get the JSON data from the request\n        json_data = request.get_json()\n        # Access individual fields from the JSON data",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "data = pd.read_csv('Crop and fertilizer dataset.csv')\n# Using flask framework to build the web application\nbackend = Flask(__name__)\n# Using CORS to allow request from different origins\nCORS(backend)\ndata_sample = pd.read_csv('Crop and fertilizer dataset.csv')\n# Function to send districts from dataset to appear in dropdown\n@backend.route('/districts', methods=['POST','GET'])\ndef return_districts():\n    districts = data_sample['District_Name'].tolist()  ",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "backend",
+        "kind": 5,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "backend = Flask(__name__)\n# Using CORS to allow request from different origins\nCORS(backend)\ndata_sample = pd.read_csv('Crop and fertilizer dataset.csv')\n# Function to send districts from dataset to appear in dropdown\n@backend.route('/districts', methods=['POST','GET'])\ndef return_districts():\n    districts = data_sample['District_Name'].tolist()  \n    unique_districts = list(set(districts))\n    return unique_districts",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "data_sample",
+        "kind": 5,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "data_sample = pd.read_csv('Crop and fertilizer dataset.csv')\n# Function to send districts from dataset to appear in dropdown\n@backend.route('/districts', methods=['POST','GET'])\ndef return_districts():\n    districts = data_sample['District_Name'].tolist()  \n    unique_districts = list(set(districts))\n    return unique_districts\n# Function to send soil colors from dataset to appear in dropdown\n@backend.route('/soilcolor', methods=['POST','GET'])\ndef return_soilcolor():",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "label_encoders",
+        "kind": 5,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "label_encoders = {}\ncategorical_features = ['District_Name', 'Soil_color', 'Fertilizer']\nfor col in categorical_features:\n    le = LabelEncoder()\n    data[col] = le.fit_transform(data[col])\n    label_encoders[col] = le\n# Splitting data into training and testing sets\nX = data.drop(columns=['Crop', 'Link']).values\ny = data['Crop'].values\n# Training a Random Forest Classifier",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "categorical_features",
+        "kind": 5,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "categorical_features = ['District_Name', 'Soil_color', 'Fertilizer']\nfor col in categorical_features:\n    le = LabelEncoder()\n    data[col] = le.fit_transform(data[col])\n    label_encoders[col] = le\n# Splitting data into training and testing sets\nX = data.drop(columns=['Crop', 'Link']).values\ny = data['Crop'].values\n# Training a Random Forest Classifier\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "X",
+        "kind": 5,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "X = data.drop(columns=['Crop', 'Link']).values\ny = data['Crop'].values\n# Training a Random Forest Classifier\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\nclf = RandomForestClassifier(n_estimators=100, random_state=42)\nclf.fit(X_train, y_train)\n# Standardizing Features\nsc = StandardScaler()\n# Function to calculate error rates\ndef calculate_error_rate(predictions, true_labels):",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "y",
+        "kind": 5,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "y = data['Crop'].values\n# Training a Random Forest Classifier\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\nclf = RandomForestClassifier(n_estimators=100, random_state=42)\nclf.fit(X_train, y_train)\n# Standardizing Features\nsc = StandardScaler()\n# Function to calculate error rates\ndef calculate_error_rate(predictions, true_labels):\n    return np.sum(predictions != true_labels) / len(true_labels)",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "clf",
+        "kind": 5,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "clf = RandomForestClassifier(n_estimators=100, random_state=42)\nclf.fit(X_train, y_train)\n# Standardizing Features\nsc = StandardScaler()\n# Function to calculate error rates\ndef calculate_error_rate(predictions, true_labels):\n    return np.sum(predictions != true_labels) / len(true_labels)\n# Function to calculate the confidence interval\ndef calculate_confidence_interval(t_statistic, se_diff, df, confidence_level):\n    alpha = 1 - confidence_level",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "sc",
+        "kind": 5,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "sc = StandardScaler()\n# Function to calculate error rates\ndef calculate_error_rate(predictions, true_labels):\n    return np.sum(predictions != true_labels) / len(true_labels)\n# Function to calculate the confidence interval\ndef calculate_confidence_interval(t_statistic, se_diff, df, confidence_level):\n    alpha = 1 - confidence_level\n    critical_value = t.ppf(1 - alpha / 2, df)\n    margin_of_error = critical_value * se_diff\n    lower_bound = t_statistic - margin_of_error",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "X_train",
+        "kind": 5,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "X_train = sc.fit_transform(X_train)\nX_test = sc.transform(X_test)\n# Function to predict the crop\ndef recommendation(District_Name, Soil_color, Nitrogen, Phosphorus, Potassium, pH, Rainfall, Temperature, Fertilizer, rmodel, sc, label_encoders):\n    # Encode the categorical features\n    District_Name_encoded = label_encoders['District_Name'].transform([District_Name])[0]\n    Soil_color_encoded = label_encoders['Soil_color'].transform([Soil_color])[0]\n    Fertilizer_encoded = label_encoders['Fertilizer'].transform([Fertilizer])[0]\n    # Arrange features into a numpy array\n    features = np.array([[District_Name_encoded, Soil_color_encoded, Nitrogen, Phosphorus, Potassium, pH, Rainfall, Temperature, Fertilizer_encoded]])",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "X_test",
+        "kind": 5,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "X_test = sc.transform(X_test)\n# Function to predict the crop\ndef recommendation(District_Name, Soil_color, Nitrogen, Phosphorus, Potassium, pH, Rainfall, Temperature, Fertilizer, rmodel, sc, label_encoders):\n    # Encode the categorical features\n    District_Name_encoded = label_encoders['District_Name'].transform([District_Name])[0]\n    Soil_color_encoded = label_encoders['Soil_color'].transform([Soil_color])[0]\n    Fertilizer_encoded = label_encoders['Fertilizer'].transform([Fertilizer])[0]\n    # Arrange features into a numpy array\n    features = np.array([[District_Name_encoded, Soil_color_encoded, Nitrogen, Phosphorus, Potassium, pH, Rainfall, Temperature, Fertilizer_encoded]])\n    # X = sc.fit(features)",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "random_forest",
+        "kind": 5,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "random_forest = RandomForest(\n    max_depth=10, \n    min_samples_leaf=3, \n    min_samples_split=7, \n    n_estimators=100, \n    criterion='gini',\n    bootstrap=True,\n    n_trees=77\n)\n# Cross-validation predictions",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "y_pred",
+        "kind": 5,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "y_pred = cross_val_predict(random_forest, X_train, y_train, cv=10)\n# Compute the Confusion Matrix\ncm = confusion_matrix(y_train, y_pred)\n# Function to print predicted crop and evaluate metrics\n@backend.route('/', methods=['POST'])\ndef recommend():\n    # Handling incoming HTTP requests\n    content_type = request.headers.get('Content-Type')\n    if content_type != 'application/json':\n        return \"Unsupported Media Type\", 415  # Unsupported Media Type status code",
+        "detail": "backend",
+        "documentation": {}
+    },
+    {
+        "label": "cm",
+        "kind": 5,
+        "importPath": "backend",
+        "description": "backend",
+        "peekOfCode": "cm = confusion_matrix(y_train, y_pred)\n# Function to print predicted crop and evaluate metrics\n@backend.route('/', methods=['POST'])\ndef recommend():\n    # Handling incoming HTTP requests\n    content_type = request.headers.get('Content-Type')\n    if content_type != 'application/json':\n        return \"Unsupported Media Type\", 415  # Unsupported Media Type status code\n    result = None\n    if request.method == 'POST':",
+        "detail": "backend",
+        "documentation": {}
+    }
+]
